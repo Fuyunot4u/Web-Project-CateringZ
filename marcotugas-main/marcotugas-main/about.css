@@ -1,0 +1,151 @@
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100dvh;
+}
+
+nav {
+    background: linear-gradient(-45deg, #159c00, #ffffa3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .list {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+nav .list ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav .list ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav .list ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 100%;
+    height: 5px;
+    background-color: #f1f1f1;
+    transition: all 0.3s;
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(12.5px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: translateY(-12.5px) rotate(-45deg);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #ffffff;
+    transition: left 0.3s ease;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 80px;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    color: #159c00;
+}
+
+.about {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.about a {
+    text-decoration: none;
+    color: #333333;
+}
+
+/* Main Content */
+.container {
+    padding-top: 100px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.about-content h1 {
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    background: #159c00;
+    color: white;
+}
